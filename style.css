@@ -1,0 +1,369 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* ==========================================
+   1. RESET & BASE STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: #3e2723; /* Dark brown text color */
+    background-color: #fdfaf4; /* Off-white background */
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif; /* Serif font for headings */
+}
+
+/* Global container to align and center content layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==========================================
+   2. HEADER & NAVIGATION BAR
+   ========================================== */
+header {
+    background-color: #4e342e; /* Deep brown background */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps navbar on top of other content when scrolling */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+    white-space: nowrap; /* Prevents menu items from breaking into two lines */
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ffca28; /* Golden yellow accent color */
+}
+
+/* ==========================================
+   3. HERO SECTION
+   ========================================== */
+.hero {
+    height: 90vh;
+    background: url('images.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark layer over the image */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-text span {
+    color: #ffca28;
+    font-weight: bold;
+}
+
+/* ==========================================
+   4. BUTTONS
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 26px;
+    background-color: #ffb300;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffa000; /* Darker amber shade on hover */
+    transform: translateY(-3px); /* Slightly lifts the button up */
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #ffca28;
+    color: #ffca28;
+    font-weight: bold;
+    padding: 10px 26px;
+    border-radius: 30px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: #ffca28;
+    color: #3e2723;
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   5. COMMON SECTION TITLES
+   ========================================== */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #4e342e;
+}
+
+/* ==========================================
+   6. MENU SECTION
+   ========================================== */
+.menu {
+    padding: 60px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    gap: 20px;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Scales up the card slightly on hover */
+}
+
+.menu-item span {
+    color: #ff6f00;
+    font-weight: bold;
+}
+/* ==========================================
+   7.ABOUT US SECTION
+   ========================================== */
+.about {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduced to look better with the paragraphs and buttons */
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* ==========================================
+   8. SPECIAL OFFERS SECTION
+   ========================================== */
+.offers {
+    background: #ffe0b2; /* Warm orange tint background */
+    padding: 60px 0;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.offers-card {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.offers h3 {
+    color: #bb601a;
+    margin-bottom: 10px;
+}
+
+.offers-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px); /* Lifts the card upwards on hover */
+}
+
+/* ==========================================
+   9. TESTIMONIALS SECTION
+   ========================================== */
+.testimonials {
+    background-color: #fff3e0;
+    padding: 60px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-style: italic;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #795548;
+}
+
+/* ==========================================
+   10. CONTACT SECTION
+   ========================================== */
+.contact {
+    padding: 60px 0;
+}
+
+.contact form {
+    display: grid;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* ==========================================
+   11. FOOTER
+   ========================================== */
+footer {
+    background: #4e342e;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links img {
+    height: 25px;
+    width: auto;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   12. RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Stacks logo and nav links vertically on small screens */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Adjusts link margins dynamically so items don't overflow */
+    .nav-links li {
+        margin: 0 10px; 
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    /* Stacks about text and about image into a single column */
+    .about {
+        flex-direction: column;
+    }
+    
+    /* Stacks copyright text and social media icons */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
